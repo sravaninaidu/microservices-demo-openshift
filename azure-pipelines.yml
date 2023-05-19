@@ -14,4 +14,9 @@ steps:
   inputs:
     connectionType: 'OpenShift Connection Service'
     openshiftService: 'Open_shift'
+    cmd: 'oc delete all --all'
+- task: oc-cmd@3
+  inputs:
+    connectionType: 'OpenShift Connection Service'
+    openshiftService: 'Open_shift'
     cmd: 'oc apply -f complete-demo.yaml'
