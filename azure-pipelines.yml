@@ -19,4 +19,4 @@ steps:
   inputs:
     connectionType: 'OpenShift Connection Service'
     openshiftService: 'Open_shift'
-    cmd: 'oc apply -f complete-demo.yaml'
+    cmd: 'oc apply -f oc apply microservices-demo-openshift/complete-demo.yaml'
