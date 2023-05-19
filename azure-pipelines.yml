@@ -14,7 +14,12 @@ steps:
   inputs:
     connectionType: 'OpenShift Connection Service'
     openshiftService: 'Open_shift'
-    cmd: 'oc delete all --all'
+    cmd: 'oc new-app https://github.com/iam-aravind/microservices-demo-openshift.git -l name=test-app'
+#- task: oc-cmd@3
+#  inputs:
+ #   connectionType: 'OpenShift Connection Service'
+  #  openshiftService: 'Open_shift'
+   # cmd: 'oc delete all --all'
 - task: oc-cmd@3
   inputs:
     connectionType: 'OpenShift Connection Service'
